@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en-US">
+  <head>
+    <meta charset="utf-8" />
+    <title>Loops: Task 1</title>
+    <style>
+      p {
+        color: purple;
+        margin: 0.5em 0;
+      }
+
+      * {
+        box-sizing: border-box;
+      }
+    </style>
+    <link rel="stylesheet" href="../styles.css" />
+  </head>
+
+  <body>
+    <section class="preview"></section>
+  </body>
+  <script>
+    const myArray = ["tomatoes", "chick peas", "onions", "rice", "black beans"];
+    const list = document.createElement("ul");
+
+    // Ciclo for... of para iterar el arreglo
+    for (element of myArray) {
+      let listElement = document.createElement("li"); // Creando elemento de la lista
+      listElement.textContent = element; // Asignando el contenido del arreglo al texto del elemento de la lista
+      list.appendChild(listElement); // Asignando elemento de la lista a la lista
+    }
+
+    // Don't edit the code below here!
+
+    const section = document.querySelector(".preview");
+    section.appendChild(list);
+  </script>
+</html>
